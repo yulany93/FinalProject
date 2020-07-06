@@ -1,4 +1,7 @@
 package Parqueadero;
+/**
+ * Clase que permite  cargar las listas de los vehiculos, residentes, Oficiales, No residentes.
+ */
 
 import java.io.BufferedWriter;
 import java.io.File;

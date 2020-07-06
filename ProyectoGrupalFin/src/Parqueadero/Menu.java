@@ -23,7 +23,7 @@ public class Menu {
 			menuPrincipal();
 			break;
 		case 2:
-			System.out.println("Digite la matricula del vehiculo");
+			System.out.println("Digite la matricula del vehiculo que sale");
 			matricula = teclado.next();
 			ap.sale(matricula);
 			menuPrincipal();
@@ -51,7 +51,7 @@ public class Menu {
 		String matricula;
 		int opcion;
 		int encontrado;
-		System.out.println("Por favor digite la matricula del vehiculo");
+		System.out.println("Por favor digite la matricula del vehiculo que ingresa");
 		matricula = teclado.next();
 				
 		
