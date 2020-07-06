@@ -10,9 +10,9 @@ public class Menu {
 	public static void menuPrincipal() {
 		String matricula;
 		int opcion = 0;
-		System.out.println("Por favor digite la opción deseada");
-		System.out.println("(1) Registrar entrada de vehículo");
-		System.out.println("(2) Registrar salida de vehículo");
+		System.out.println("Por favor digite la opcion deseada");
+		System.out.println("(1) Registrar entrada de vehiculo");
+		System.out.println("(2) Registrar salida de vehiculo");
 		System.out.println("(3) Generar informe pagos Residentes");
 		System.out.println("(4) Iniciar mes");
 		System.out.println("(5) Salir");
@@ -38,7 +38,7 @@ public class Menu {
 			menuPrincipal();
 			break;
 		case 5:
-			System.out.println("Feliz resto de día");
+			System.out.println("Feliz resto de dia");
 			break;
 
 		default:
@@ -51,12 +51,12 @@ public class Menu {
 		String matricula;
 		int opcion;
 		int encontrado;
-		System.out.println("Por favor digite la matricula del vehículo");
+		System.out.println("Por favor digite la matricula del vehiculo");
 		matricula = teclado.next();
 				
 		
 		
-		System.out.println("Por favor digite el tipo de vehículo que ingresa");
+		System.out.println("Por favor digite el tipo de vehiculo que ingresa");
 		System.out.println("(1) Vehiculo Oficial");
 		System.out.println("(2) Vehiculo Residente");
 		System.out.println("(3) Vehiculo No Residente");
