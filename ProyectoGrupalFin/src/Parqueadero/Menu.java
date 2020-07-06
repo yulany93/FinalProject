@@ -50,6 +50,7 @@ public class Menu {
 	public static void menuVehiculo() {
 		String matricula;
 		int opcion;
+		int encontrado;
 		System.out.println("Por favor digite la matricula del vehículo");
 		matricula = teclado.next();
 				
@@ -59,14 +60,16 @@ public class Menu {
 		System.out.println("(1) Vehiculo Oficial");
 		System.out.println("(2) Vehiculo Residente");
 		System.out.println("(3) Vehiculo No Residente");
-		opcion = teclado.nextInt();		
-		ap.EncontrarMatricula(matricula);		
-		if (ap != null) {				
-			System.out.println("El vehiculo ya se encuentra en el parqueadero.");			
-			return; 
+		opcion = teclado.nextInt();
+		encontrado = ap.EncontrarMatricula(matricula, opcion);
+		
+		if ( encontrado == 1) {
+			System.out.println(
+					"El vehiculo ya se encuentra en el parqueadero registrado en un tipo distinto al ingresado.");
+			menuPrincipal();
+		} else {
+			ap.entra(matricula, opcion);
 		}
-		//ap.entra(matricula, opcion); 
-
 	}
 
 	public static void main(String[] args) {

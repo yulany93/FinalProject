@@ -21,17 +21,44 @@ public class Aparcamiento {
 
 	}
 
-	public VehiculoOficial EncontrarMatricula(String matricula) {
-		if (vehOficiales != null) {
-			for (VehiculoOficial vehi : vehOficiales) {
-
-				if (vehi.getMatricula() == matricula) {
-					return vehi;
+	public int EncontrarMatricula(String matricula, int opcion) {
+		if (opcion == 1) {
+			if (vehResidente != null) {
+				for (VehiculoResidente vehi : vehResidente) {
+					if (vehi.getMatricula() == matricula) {
+						return 1;
+					}
 				}
 			}
 		}
-		return null;
+		if (opcion == 2) {
+			if (vehOficiales != null) {
+				for (VehiculoOficial vehi : vehOficiales) {
+					if (vehi.getMatricula() == matricula) {
+						return 1;
+					}
+				}
+			}
+		}
+		if (opcion == 3) {
+			if (vehOficiales != null) {
+				for (VehiculoOficial vehi : vehOficiales) {
+					if (vehi.getMatricula() == matricula) {
+						return 1;
+					}
+				}
+			}
+			if (vehResidente != null) {
+				for (VehiculoResidente vehi : vehResidente) {
+					if (vehi.getMatricula() == matricula) {
+						return 1;
+					}
+				}
+			}
+		}
+		return -1;
 	}
+
 
 	public static LocalDateTime obtenerHoraActual() {
 		LocalDateTime horaActual = LocalDateTime.now();
