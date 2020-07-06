@@ -70,6 +70,7 @@ public class Menu {
 		} else {
 			ap.entra(matricula, opcion);
 		}
+		
 	}
 
 	public static void main(String[] args) {
