@@ -62,8 +62,7 @@ public class Menu {
 		System.out.println("(3) Vehiculo No Residente");
 		opcion = teclado.nextInt();
 		encontrado = ap.EncontrarMatricula(matricula, opcion);
-		
-		
+			
 		if ( encontrado == 1) {
 			System.out.println(
 					"El vehiculo ya se encuentra en el parqueadero registrado en un tipo distinto al ingresado.");
