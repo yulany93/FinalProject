@@ -5,7 +5,8 @@ import java.util.ArrayList;
 
 public class VehiculoOficial extends Vehiculo {
 	ArrayList<Estancia> estancias = new ArrayList<Estancia>();
-
+	int tiempoAcumulado = 0;
+	
 	public VehiculoOficial(String matricula) {
 		super(matricula);
 	}
