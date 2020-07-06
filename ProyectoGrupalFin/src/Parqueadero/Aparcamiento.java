@@ -23,34 +23,34 @@ public class Aparcamiento {
 
 	public int EncontrarMatricula(String matricula, int opcion) {
 		if (opcion == 1) {
-			if (vehResidente != null) {
+			if (vehResidente.size() != 0) {
 				for (VehiculoResidente vehi : vehResidente) {
-					if (vehi.getMatricula() == matricula) {
+					if (vehi.getMatricula().equals(matricula)) {
 						return 1;
 					}
 				}
 			}
 		}
 		if (opcion == 2) {
-			if (vehOficiales != null) {
+			if (vehOficiales.size() != 0) {
 				for (VehiculoOficial vehi : vehOficiales) {
-					if (vehi.getMatricula() == matricula) {
+					if (vehi.getMatricula().equals(matricula)) {
 						return 1;
 					}
 				}
 			}
 		}
 		if (opcion == 3) {
-			if (vehOficiales != null) {
+			if (vehOficiales.size() != 0) {
 				for (VehiculoOficial vehi : vehOficiales) {
-					if (vehi.getMatricula() == matricula) {
+					if (vehi.getMatricula().equals(matricula)) {
 						return 1;
 					}
 				}
 			}
-			if (vehResidente != null) {
+			if (vehResidente.size() != 0) {
 				for (VehiculoResidente vehi : vehResidente) {
-					if (vehi.getMatricula() == matricula) {
+					if (vehi.getMatricula().equals(matricula)) {
 						return 1;
 					}
 				}
