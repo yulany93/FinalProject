@@ -10,9 +10,9 @@ public class Menu {
 	public static void menuPrincipal() {
 		String matricula;
 		int opcion = 0;
-		System.out.println("Por favor digite la opción deseada");
-		System.out.println("(1) Registrar entrada de vehículo");
-		System.out.println("(2) Registrar salida de vehículo");
+		System.out.println("Por favor digite la opciÃ³n deseada");
+		System.out.println("(1) Registrar entrada de vehÃ­culo");
+		System.out.println("(2) Registrar salida de vehÃ­culo");
 		System.out.println("(3) Generar informe pagos Residentes");
 		System.out.println("(4) Iniciar mes");
 		System.out.println("(5) Salir");
@@ -38,7 +38,7 @@ public class Menu {
 			menuPrincipal();
 			break;
 		case 5:
-			System.out.println("Feliz resto de día");
+			System.out.println("Feliz resto de dÃ­a");
 			break;
 
 		default:
@@ -50,22 +50,26 @@ public class Menu {
 	public static void menuVehiculo() {
 		String matricula;
 		int opcion;
-		System.out.println("Por favor digite la matricula del vehículo");
+		int encontrado;
+		System.out.println("Por favor digite la matricula del vehÃ­culo");
 		matricula = teclado.next();
 				
 		
 		
-		System.out.println("Por favor digite el tipo de vehículo que ingresa");
+		System.out.println("Por favor digite el tipo de vehÃ­culo que ingresa");
 		System.out.println("(1) Vehiculo Oficial");
 		System.out.println("(2) Vehiculo Residente");
 		System.out.println("(3) Vehiculo No Residente");
-		opcion = teclado.nextInt();		
-		ap.EncontrarMatricula(matricula);		
-		if (ap != null) {				
-			System.out.println("El vehiculo ya se encuentra en el parqueadero.");			
-			return; 
+		opcion = teclado.nextInt();
+		encontrado = ap.EncontrarMatricula(matricula, opcion);
+			
+		if ( encontrado == 1) {
+			System.out.println(
+					"El vehiculo ya se encuentra en el parqueadero registrado en un tipo distinto al ingresado.");
+			menuPrincipal();
+		} else {
+			ap.entra(matricula, opcion);
 		}
-		
 
 	}
 
